@@ -1,4 +1,4 @@
-# Churn-Prediction
+# Churn Prediction
 
 This is a simple project to demonstrate that customer 'churn' (churn here refers to whether the customer will continue with same service provider or will discontinue)
 can be predicted using information already available to the company in the form of features and services availed by the customer as well as the billing 
