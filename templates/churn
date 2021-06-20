@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	label{
+		display: block;
+	}
+</style>
+<head>
+	<title>Churn Prediction</title>
+</head>
+<body>
+	<form action="{{ url_for('predict')}}" method="POST">
+		<label for="gender">Gender:</label>
+		<input type="text" id="gender" name="gender" required>
+		<label for="s_citizen">Senior Citizen:</label>
+		<input type="number" id="s_citizen" name="s_citizen" required>
+		<label for="partner">Partner:</label>
+		<input type="text" id="partner" name="partner" required>
+		<label for="dependents">Dependents:</label>
+		<input type="text" id="dependents" name="dependents" required>
+		<label for="tenure">Tenure:</label>
+		<input type="number" id="tenure" name="tenure" step="any" required><br>
+		<label for="p_service">Phone Service:</label>
+		<input type="text" id="p_service" name="p_service" required>
+		<label for="multi_lines">Multiple Lines:</label>
+		<input type="text" id="multi_lines" name="multi_lines" required>
+		<label for="i_service">Internet Service:</label>
+		<input type="text" id="i_service" name="i_service" required>
+		<label for="o_sec">Online Security:</label>
+		<input type="text" id="o_sec" name="o_sec" required>
+		<label for="o_backup">Online Backup:</label>
+		<input type="text" id="o_backup" name="o_backup" required><br>
+		<label for="dev_pro">Device Protection:</label>
+		<input type="text" id="dev_pro" name="dev_pro" required>
+		<label for="tech_support">Tech Support:</label>
+		<input type="text" id="tech_support" name="tech_support" required>
+		<label for="str_tv">StreamingTV:</label>
+		<input type="text" id="str_tv" name="str_tv" required>
+		<label for="str_mov">Streaming Movies:</label>
+		<input type="text" id="str_mov" name="str_mov" required>
+		<label for="contract">Contract:</label>
+		<input type="text" id="contract" name="contract" required><br>
+		<label for="paper_bill">Paperless Billing:</label>
+		<input type="text" id="paper_bill" name="paper_bill" required>
+		<label for="pay_method">Payment Method:</label>
+		<input type="text" id="pay_method" name="pay_method" required>
+		<label for="monthly_charge">Monthly Charges:</label>
+		<input type="number" id="monthly_charge" step="any" name="monthly_charge">
+		<label for="total_charge">Total Charges:</label>
+		<input type="number" id="total_charge" step="any" name="total_charge">
+		<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+	</form>
+	<br>
+	{{ prediction_text }}
+</body>
+</html>
